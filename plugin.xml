@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="org.common.plugins.updateapp"
+    version="0.3.2">
+
+    <name>Update App plugin</name>
+    
+    <description>
+      &lt;p&gt;This plugin come from internet. Thanks to the author. &lt;/p&gt;
+      
+      &lt;p&gt;Update App plugin allows you replace the current running app with new version app. It only suport Andriod platform. &lt;/p&gt;
+    </description>
+    
+    <license>Apache 2.0</license>
+    
+    <asset src="www/update-plugin.js" target="update-plugin.js" />
+    
+    <config-file target="config.xml" parent="/*">
+      <access origin="https://m.facebook.com" />
+      <access origin="https://graph.facebook.com" />
+      <access origin="https://api.facebook.com" />
+      <access origin="https://*.fbcdn.net" />
+      <access origin="https://*.akamaihd.net" />
+    </config-file>
+    
+    <engines>
+      <engine name="cordova" version=">=2.9.0" />
+    </engines>
+    
+    <!-- android -->
+    <platform name="android">
+
+        <config-file target="res/xml/config.xml" parent="plugins">
+            <plugin name="Update" value="org.common.plugins.updateapp.Update"/>
+        </config-file>
+        
+        <!-- cordova plugin src files -->
+        <source-file src="src/android/Update.java" target-dir="src/org/common/plugins/updateapp" />
+    </platform>
+
+</plugin>
