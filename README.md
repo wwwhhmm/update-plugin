@@ -6,7 +6,7 @@ Update App plugin allows you replace the current running app with new version ap
 
 There is an example of downloading a .apk and updating the APP immediately.
 
--------------->index.html
+--------------index.html
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -31,7 +31,7 @@ There is an example of downloading a .apk and updating the APP immediately.
 </body>
 </html>
 
------------>app.js
+-----------app.js
 var initOptions = {
 	updateSite : 'http://xxxx.com/mobile',
 };
